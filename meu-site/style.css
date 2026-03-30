@@ -1,0 +1,145 @@
+:root {
+  --azul-unip: #0b1a78;
+  --amarelo-unip: #ffea00;
+  --branco: #ffffff;
+  --cinza: #f4f4f4;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fundo estilo UNIP */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, var(--azul-unip), #1a2bb8);
+  color: var(--branco);
+  min-height: 100vh;
+}
+
+/* Container */
+
+/* Card maior (container do Sobre nós) */
+.sobre-container {
+  background: #eaeaea;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Ajuste dos cards internos */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background: #dcdcdc;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+/* efeito hover (opcional, fica bonito) */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+main {
+  background: var(--branco);
+  color: #333;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 12px;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+header img {
+  width: 120px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--amarelo-unip);
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+/* Tabela */
+table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
+
+th {
+  background: var(--azul-unip);
+  color: white;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+/* CARDS (Sobre nós) */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--cinza);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Responsivo */
+@media (min-width: 768px) {
+  .cards {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 200px;
+  }
+
+  main {
+    max-width: 1000px;
+    margin: 2rem auto;
+  }
+}
